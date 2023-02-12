@@ -1,12 +1,19 @@
+import java.util.Arrays;
+
 /**
  * Sorter
  */
 public class Sorter {
 
     public static void main(String[] args) {
-        
+      int[] arr1 = {5, 7, 3, 13, 2};
+      System.out.println("Array 1 BEFORE INSERTION SORT");
+      System.out.println(Arrays.toString(arr1));
+      arr1 = sortInsertion(arr1);
+      System.out.println("Array 1 AFTER INESRTION SORT");
+      System.out.println(Arrays.toString(arr1));
     }
-     public static void sortInsertion(int [] sort_arr){
+     public static int[] sortInsertion(int [] sort_arr){
 
         for(int i=0;i<sort_arr.length;++i){
   
@@ -21,6 +28,7 @@ public class Sorter {
   
           }
         }
+        return sort_arr;
       }
     public static void selectionSort(int[] array) { 
         int n = array.length; 
